@@ -69,7 +69,7 @@ public class Bishop extends Piece{
 			return false;
 	}
 
-public boolean canCapture(Model model, int col, int row ) {
+	public boolean canCapture(Model model, int col, int row ) {
 		Piece[][] pieces = model.getPieces();
 		
 		//first check the move isn't to the current position (eg a1 to a1!)
