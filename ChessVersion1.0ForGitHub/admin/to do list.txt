@@ -1,0 +1,20 @@
+HumanPlayer and ComputerPlayer classes don't do very much. May be worth replacing them with a type field in Player class.
+
+Pawn and Model classes have very similar methods which check for en passant
+//in pawn class
+//these methods check if a particular move is a valid en passant move
+private boolean validWhiteEnPassant(Model model, int col, int row) 
+private boolean validBlackEnPassant(Model model, int col, int row)
+
+in Model class
+//these methods check if en passant has already occurred so that the capturd pawn can be removed
+public void checkForEnPassant ( Piece piece, int col1, int row1, int col2, int row2 )
+public boolean checkForWhiteEnPassant( Piece piece, Piece previousPiece, int oldX, int oldY, int newX, int newY, int col1, int row1, int col2, int row2 )
+public boolean checkForBlackEnPassant( Piece piece, Piece previousPiece, int oldX, int oldY, int newX, int newY, int col1, int row1, int col2, int row2 )
+
+v2.0
+put in some proper AI - it is currently extremely crude
+
+or 
+add a networked version
+		
